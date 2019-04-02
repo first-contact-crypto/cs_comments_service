@@ -32,4 +32,4 @@ log/
 /nbproject
 .idea/
 
-.ruby-version
+.ruby-version.vscode

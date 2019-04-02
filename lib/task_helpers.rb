@@ -33,7 +33,7 @@ module TaskHelpers
         first_catchup_start_time = Time.now
         adjusted_start_time = initial_start_time - (extra_catchup_minutes * 60)
         catchup_index(adjusted_start_time, index_name, batch_size, sleep_time)
-
+        LOG.info "alias_name: #{alias_name} .. index_name: #{index_name}." 
         move_alias(alias_name, index_name, force_delete: true)
         adjusted_start_time = first_catchup_start_time - (extra_catchup_minutes * 60)
         catchup_index(adjusted_start_time, alias_name, batch_size, sleep_time)
